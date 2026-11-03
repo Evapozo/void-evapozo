@@ -1,11 +1,11 @@
 // ============================================================
 // VOID · Variables del UI Kit
-// Solo sobrescribimos lo necesario para adaptar Bootstrap
+// Sobreescribe lo necesario para adaptar Bootstrap
 // a los colores, tipografía y bordes del diseño de Figma.
 // ============================================================
 
 // --- Colores principales del UI Kit ---
-$primary:   #111111; // Negro VOID (botones, enlaces, foco)
+$primary:   #111111; // Negro (botones, enlaces, foco)
 $secondary: #555555; // Gris medio (textos secundarios)
 $body-bg:   #F5F5F5; // Fondo general de la web
 $body-color:#222222; // Color del texto principal
@@ -13,7 +13,7 @@ $dark:      #111111; // Para .btn-dark y .bg-dark
 $light:     #FFFFFF; // Para .btn-light (botones del hero)
 
 // --- Tipografía ---
-// Fuente sans-serif limpia, sin depender de archivos externos.
+// Fuente sans-serif.
 $font-family-sans-serif: "Helvetica Neue", Helvetica, Arial, sans-serif;
 $headings-font-family:   $font-family-sans-serif;
 $headings-font-weight:   400;
@@ -29,7 +29,7 @@ $border-radius-xl:  0;
 $border-radius-xxl: 0;
 $border-width:      1px;
 
-// --- Componentes que queremos totalmente planos ---
+// --- Componentes planos ---
 $btn-border-radius:      0;
 $card-border-radius:     0;
 $card-bg:               #FFFFFF;
@@ -38,7 +38,7 @@ $form-check-input-border-radius: 0;
 $offcanvas-horizontal-width: 420px;
 $offcanvas-bg-color:    #FFFFFF;
 
-// --- Formularios discretos ---
+// --- Formularios ---
 $input-border-color: #CCCCCC;
 $input-focus-border-color: $primary;
 $input-btn-focus-box-shadow: none;

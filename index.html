@@ -16,6 +16,7 @@
     <!-- ============================================================
        HEADER DINÁMICO
        Empieza transparente sobre el hero y pasa a blanco al hacer scroll (js/script.js).
+       Iconos: Lucide v1.67.0 (https://lucide.dev)
        ============================================================ -->
     <header class="fixed-top w-100">
         <nav class="navbar py-3 py-lg-4" aria-label="Barra de navegación principal">
@@ -25,9 +26,12 @@
                 <div class="d-flex align-items-center gap-3">
                     <button class="btn btn-link p-0 header-btn" type="button" data-bs-toggle="offcanvas"
                         data-bs-target="#menuOffcanvas" aria-controls="menuOffcanvas" aria-label="Abrir menú">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="none" stroke="currentColor"
-                            stroke-width="1.5" aria-hidden="true">
-                            <path d="M2 5h18M2 11h18M2 17h18" />
+                        <svg class="lucide lucide-menu" xmlns="http://www.w3.org/2000/svg" width="22" height="22"
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path d="M4 5h16" />
+                            <path d="M4 12h16" />
+                            <path d="M4 19h16" />
                         </svg>
                     </button>
 
@@ -60,29 +64,34 @@
                     </div>
 
                     <button class="btn btn-link p-0 header-btn" type="button" aria-label="Buscar">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor"
-                            stroke-width="1.5" aria-hidden="true">
-                            <circle cx="10.5" cy="10.5" r="6.5" />
-                            <path d="m15.5 15.5 4.5 4.5" />
+                        <svg class="lucide lucide-search" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path d="m21 21-4.34-4.34" />
+                            <circle cx="11" cy="11" r="8" />
                         </svg>
                     </button>
 
                     <a class="header-link d-inline-flex align-items-center" href="login.html" aria-label="Mi perfil">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor"
-                            stroke-width="1.5" aria-hidden="true">
-                            <circle cx="10" cy="7" r="3.5" />
-                            <path d="M3 19c0-3.9 3.1-7 7-7s7 3.1 7 7" />
+                        <svg class="lucide lucide-user" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" />
+                            <circle cx="12" cy="7" r="4" />
                         </svg>
                     </a>
-
                     <!-- Botón del carrito -->
+                    <!-- El número de productos en la cesta es fijo, deberia actualizarse con javascript -->
                     <button class="btn btn-link position-relative p-0 header-btn" type="button"
                         data-bs-toggle="offcanvas" data-bs-target="#cartOffcanvas" aria-controls="cartOffcanvas"
                         aria-label="Abrir cesta de la compra, 2 productos">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor"
-                            stroke-width="1.5" aria-hidden="true">
-                            <path d="M3 6h14l-1 13H4L3 6Z" />
-                            <path d="M7 6V4.5a3 3 0 0 1 6 0V6" />
+                        <svg class="lucide lucide-shopping-bag" xmlns="http://www.w3.org/2000/svg" width="20"
+                            height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path d="M16 10a4 4 0 0 1-8 0" />
+                            <path d="M3.103 6.034h17.794" />
+                            <path
+                                d="M3.4 5.467a2 2 0 0 0-.4 1.2V20a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6.667a2 2 0 0 0-.4-1.2l-2-2.667A2 2 0 0 0 17 2H7a2 2 0 0 0-1.6.8z" />
                         </svg>
                         <span
                             class="position-absolute top-0 start-100 translate-middle badge rounded-pill header-cart-badge">
@@ -97,8 +106,8 @@
 
     <main>
 
-        <!-- Título principal para lectores de pantalla y SEO -->
-        <h1 class="visually-hidden">VOID · Moda de lujo minimalista</h1>
+        <!-- Título principal para SEO -->
+        <h1 class="visually-hidden">VOID · Moda minimalista</h1>
 
         <!-- ============================================================
          HERO · Pantalla completa y dos columnas sin separación
@@ -183,7 +192,7 @@
         <footer class="bg-white border-top pt-5">
             <div class="container">
 
-                <div class="row g-4 pb-5">
+                <div class="row justify-content-center g-4 pb-5">
 
                     <div class="col-6 col-md-3">
                         <h2 class="h6 text-uppercase tracking-wide mb-3">Ayuda</h2>
@@ -192,16 +201,6 @@
                             <li><a class="link-secondary text-decoration-none" href="#">Envíos y entregas</a></li>
                             <li><a class="link-secondary text-decoration-none" href="#">Devoluciones</a></li>
                             <li><a class="link-secondary text-decoration-none" href="#">Preguntas frecuentes</a></li>
-                        </ul>
-                    </div>
-
-                    <div class="col-6 col-md-3">
-                        <h2 class="h6 text-uppercase tracking-wide mb-3">Guía de compra</h2>
-                        <ul class="list-unstyled d-grid gap-2 small mb-0">
-                            <li><a class="link-secondary text-decoration-none" href="#">Tallas</a></li>
-                            <li><a class="link-secondary text-decoration-none" href="#">Cuidado de las prendas</a></li>
-                            <li><a class="link-secondary text-decoration-none" href="#">Materiales</a></li>
-                            <li><a class="link-secondary text-decoration-none" href="#">Tarjetas regalo</a></li>
                         </ul>
                     </div>
 
@@ -249,7 +248,7 @@
 
         <div class="offcanvas-body d-flex flex-column p-4">
 
-            <!-- Pestañas Hombre / Mujer  nav tabs pills de bootstrap-->
+            <!-- Pestañas Hombre / Mujer con nav tabs pills de bootstrap-->
             <ul class="nav nav-pills nav-fill gap-2 mb-4" id="pills-tab" role="tablist">
                 <li class="nav-item" role="presentation">
                     <button class="nav-link active text-uppercase tracking-wide rounded-0 py-2" id="pills-mujer-tab"
@@ -341,7 +340,7 @@
                             &times;
                         </button>
                     </div>
-                    <p class="small text-secondary mb-2">Talla M · Camuflaje</p>
+                    <p class="small text-secondary mb-2">Talla M · Pantalón camuflaje</p>
                     <p class="mb-0 fw-semibold">50,00 €</p>
                 </div>
             </div>
@@ -363,7 +362,7 @@
         </div>
     </aside>
 
-    <!-- Bootstrap con Popper incluido + nuestro JavaScript -->
+    <!-- Bootstrap con Popper incluido + JavaScript -->
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/script.js"></script>
 </body>

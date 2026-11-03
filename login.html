@@ -12,7 +12,9 @@
 <body>
 
   <!-- ============================================================
-       BARRA SUPERIOR MINIMALISTA
+       BARRA SUPERIOR 
+       Contiene el logo tipo texto y un enlace para volver a la tienda,
+       pulsando el logo tambien vuelve a la página principal.
        ============================================================ -->
   <header class="bg-white border-bottom">
     <nav class="navbar py-3" aria-label="Barra de navegación de acceso">
@@ -36,7 +38,9 @@
 
   <!-- ============================================================
        FORMULARIO DE ACCESO
-       Contenedor centrado vertical y horizontalmente.
+       Contenedor centrado vertical y horizontalmente (row justify-content-center).
+       Contiene un formulario con validación de campos y mensajes de error,
+       checkbox para recordar sesión y enlaces para recuperar contraseña o crear cuenta (paginas que todavía no existen).
        ============================================================ -->
   <main class="min-vh-100 d-flex align-items-center py-5">
     <div class="container">
@@ -88,7 +92,7 @@
               </form>
 
               <p class="small text-center text-secondary mt-4 mb-0">
-                <a class="link-secondary" href="#">¿Has olvidado tu contraseña?</a>
+                <a class="link-secondary" href="#">¿Olvidaste tu contraseña?</a>
               </p>
 
             </div>
@@ -103,7 +107,7 @@
     </div>
   </main>
 
-  <!-- Bootstrap con Popper incluido + nuestro JavaScript -->
+  <!-- Bootstrap con Popper incluido + JavaScript -->
   <script src="js/bootstrap.bundle.min.js"></script>
   <script src="js/script.js"></script>
 </body>
