@@ -1,0 +1,54 @@
+// ============================================================
+// HEADER DINÁMICO
+// Empieza transparente sobre las imágenes del hero.
+// Al hacer scroll aparece un fondo blanco con letras negras.
+// La clase .header-scrolled la añade js/script.js.
+// ============================================================
+
+header.fixed-top {
+  // Estado inicial: transparente sobre las fotos del hero.
+  background-color: transparent;
+  border-bottom: 1px solid transparent;
+  transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+
+  .navbar {
+
+    .navbar-brand,
+    .nav-link,
+    .header-btn,
+    .header-link {
+      color: #ffffff;
+      transition: color 0.3s ease;
+    }
+
+    // Insignia del carrito: fondo blanco y número negro.
+    .header-cart-badge {
+      background-color: #ffffff;
+      color: #000000;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+  }
+
+  // Estado con scroll: fondo blanco, letras negras y sombra suave.
+  &.header-scrolled {
+    background-color: #ffffff;
+    border-color: #e5e5e5;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+
+    .navbar {
+
+      .navbar-brand,
+      .nav-link,
+      .header-btn,
+      .header-link {
+        color: #111111;
+      }
+
+      // Insignia del carrito: fondo negro y número blanco.
+      .header-cart-badge {
+        background-color: #111111;
+        color: #ffffff;
+      }
+    }
+  }
+}

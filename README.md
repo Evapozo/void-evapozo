@@ -11,7 +11,7 @@ void/
 ├── index.html              → Home: navbar, hero, newsletter y footer
 ├── login.html              → Acceso de usuario
 ├── css/
-│   └── custom.css          → CSS compilado desde Sass (ya incluido)
+│   └── custom.css          → CSS compilado desde Sass 
 ├── scss/
 │   ├── _variables.scss     → Colores, fuentes y bordes del UI Kit
 │   ├── _botones.scss       → Retoques planos de botones y marca
