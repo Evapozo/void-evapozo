@@ -1,0 +1,54 @@
+// ============================================================
+// VOID · Retoques mínimos de botones y marca
+// El resto del estilo viene directamente de Bootstrap 5.3.
+// ============================================================
+
+.btn {
+  text-transform: uppercase;
+  letter-spacing: .12em;
+  font-size: .75rem;
+  font-weight: 500;
+  padding: .75rem 1.5rem;
+  border-radius: 0;
+}
+
+.btn-lg {
+  padding: .875rem 2rem;
+  font-size: .8rem;
+}
+
+// Botón principal: negro plano, sin sombras ni degradados.
+.btn-dark {
+  --bs-btn-bg: #111111;
+  --bs-btn-border-color: #111111;
+  --bs-btn-hover-bg: #333333;
+  --bs-btn-hover-border-color: #333333;
+  --bs-btn-active-bg: #000000;
+  --bs-btn-active-border-color: #000000;
+}
+
+// Botón claro del hero: blanco que se invierte al pasar el ratón.
+.btn-light {
+  --bs-btn-bg: #FFFFFF;
+  --bs-btn-border-color: #FFFFFF;
+  --bs-btn-color: #111111;
+  --bs-btn-hover-bg: #111111;
+  --bs-btn-hover-border-color: #111111;
+  --bs-btn-hover-color: #FFFFFF;
+  --bs-btn-active-bg: #111111;
+  --bs-btn-active-border-color: #111111;
+  --bs-btn-active-color: #FFFFFF;
+}
+
+// Logotipo: mayúsculas y mucho espaciado entre letras.
+.brand-void {
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: .35em;
+  text-decoration: none;
+}
+
+// Pequeño espaciado elegante para enlaces del menú y textos en mayúscula.
+.tracking-wide {
+  letter-spacing: .12em;
+}

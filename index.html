@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="VOID · Moda de lujo minimalista. Colecciones de mujer y hombre.">
+    <title>VOID · Moda de lujo minimalista</title>
+
+    <!-- CSS generado con Sass a partir de scss/custom.scss -->
+    <link rel="stylesheet" href="css/custom.css">
+</head>
+
+<body>
+
+    <!-- ============================================================
+       HEADER DINÁMICO
+       Empieza transparente sobre el hero y pasa a blanco al hacer scroll (js/script.js).
+       ============================================================ -->
+    <header class="fixed-top w-100">
+        <nav class="navbar py-3 py-lg-4" aria-label="Barra de navegación principal">
+            <div class="container-fluid px-3 px-lg-4 position-relative">
+
+                <!-- Zona izquierda: menú móvil + categorías de escritorio -->
+                <div class="d-flex align-items-center gap-3">
+                    <button class="btn btn-link p-0 header-btn" type="button" data-bs-toggle="offcanvas"
+                        data-bs-target="#menuOffcanvas" aria-controls="menuOffcanvas" aria-label="Abrir menú">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="none" stroke="currentColor"
+                            stroke-width="1.5" aria-hidden="true">
+                            <path d="M2 5h18M2 11h18M2 17h18" />
+                        </svg>
+                    </button>
+
+                    <div class="d-none d-lg-flex align-items-center gap-4">
+                        <a class="nav-link p-0 small text-uppercase tracking-wide" href="#mujer">Mujer</a>
+                        <a class="nav-link p-0 small text-uppercase tracking-wide" href="#hombre">Hombre</a>
+                    </div>
+                </div>
+
+                <!-- Zona central: logotipo siempre centrado -->
+                <a class="navbar-brand position-absolute top-50 start-50 translate-middle m-0 py-0 brand-void"
+                    href="index.html" aria-label="VOID, ir a la página principal">
+                    VOID
+                </a>
+
+                <!-- Zona derecha: país, búsqueda, perfil y cesta -->
+                <div class="d-flex align-items-center gap-3">
+                    <div class="dropdown d-none d-md-block">
+                        <button
+                            class="btn btn-link text-decoration-none p-0 small tracking-wide dropdown-toggle header-btn"
+                            type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            ES / EUR
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-end rounded-0 border-0 shadow-sm mt-3">
+                            <li><a class="dropdown-item small" href="#">España · EUR</a></li>
+                            <li><a class="dropdown-item small" href="#">Francia · EUR</a></li>
+                            <li><a class="dropdown-item small" href="#">Portugal · EUR</a></li>
+                            <li><a class="dropdown-item small" href="#">Reino Unido · GBP</a></li>
+                        </ul>
+                    </div>
+
+                    <button class="btn btn-link p-0 header-btn" type="button" aria-label="Buscar">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor"
+                            stroke-width="1.5" aria-hidden="true">
+                            <circle cx="10.5" cy="10.5" r="6.5" />
+                            <path d="m15.5 15.5 4.5 4.5" />
+                        </svg>
+                    </button>
+
+                    <a class="header-link d-inline-flex align-items-center" href="login.html" aria-label="Mi perfil">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor"
+                            stroke-width="1.5" aria-hidden="true">
+                            <circle cx="10" cy="7" r="3.5" />
+                            <path d="M3 19c0-3.9 3.1-7 7-7s7 3.1 7 7" />
+                        </svg>
+                    </a>
+
+                    <!-- Botón del carrito -->
+                    <button class="btn btn-link position-relative p-0 header-btn" type="button"
+                        data-bs-toggle="offcanvas" data-bs-target="#cartOffcanvas" aria-controls="cartOffcanvas"
+                        aria-label="Abrir cesta de la compra, 2 productos">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor"
+                            stroke-width="1.5" aria-hidden="true">
+                            <path d="M3 6h14l-1 13H4L3 6Z" />
+                            <path d="M7 6V4.5a3 3 0 0 1 6 0V6" />
+                        </svg>
+                        <span
+                            class="position-absolute top-0 start-100 translate-middle badge rounded-pill header-cart-badge">
+                            2
+                        </span>
+                    </button>
+                </div>
+
+            </div>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- Título principal para lectores de pantalla y SEO -->
+        <h1 class="visually-hidden">VOID · Moda de lujo minimalista</h1>
+
+        <!-- ============================================================
+         HERO · Pantalla completa y dos columnas sin separación
+         Móvil: solo mujer (col-12).
+         Escritorio: mujer y hombre al 50% (col-md-6).
+         ============================================================ -->
+        <section aria-label="Colecciones destacadas">
+            <div class="container-fluid g-0">
+                <div class="row g-0">
+
+                    <!-- Columna Mujer -->
+                    <div id="mujer" class="col-12 col-md-6 position-relative vh-100 overflow-hidden">
+                        <img src="img/cat-mujer.jpg"
+                            class="position-absolute top-0 start-0 w-100 h-100 object-fit-cover"
+                            alt="Bolso de la colección de mujer VOID">
+                        <div class="position-absolute top-0 start-0 w-100 h-100 bg-black opacity-50"></div>
+                        <a href="#"
+                            class="btn btn-light position-absolute bottom-0 start-50 translate-middle-x mb-5 px-5 py-3">
+                            Mujer
+                        </a>
+                    </div>
+
+                    <!-- Columna Hombre: oculta en móvil, visible desde md -->
+                    <div id="hombre" class="col-md-6 d-none d-md-block position-relative vh-100 overflow-hidden">
+                        <img src="img/cat-hombre.jpg"
+                            class="position-absolute top-0 start-0 w-100 h-100 object-fit-cover"
+                            alt="Pantalón de la colección de hombre VOID">
+                        <div class="position-absolute top-0 start-0 w-100 h-100 bg-black opacity-50"></div>
+                        <a href="#"
+                            class="btn btn-light position-absolute bottom-0 start-50 translate-middle-x mb-5 px-5 py-3">
+                            Hombre
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================================
+         NEWSLETTER
+         Formulario validado desde js/script.js
+         ============================================================ -->
+        <section id="newsletter" class="bg-white py-5">
+            <div class="container py-4 py-lg-5">
+                <div class="row justify-content-center text-center">
+                    <div class="col-12 col-md-8 col-lg-6">
+
+                        <p class="small text-uppercase text-secondary tracking-wide mb-2">Newsletter</p>
+                        <h2 class="h3 mb-3">Suscríbete y obtén un 10% de descuento</h2>
+                        <p class="text-secondary mb-4">
+                            Recibe nuevas colecciones, ediciones limitadas, restocks y eventos exclusivos.
+                        </p>
+
+                        <form id="formNewsletter" class="form-validable row g-2 justify-content-center" novalidate
+                            data-mensaje-ok="¡Gracias! Ya formas parte de VOID.">
+
+                            <div class="col-12 col-sm-8">
+                                <label for="emailNewsletter" class="visually-hidden">Correo electrónico</label>
+                                <input type="email" class="form-control form-control-lg" id="emailNewsletter"
+                                    name="email" placeholder="tu@email.com" autocomplete="email" required>
+                                <div class="invalid-feedback text-start">Introduce un correo electrónico válido.</div>
+                            </div>
+
+                            <div class="col-12 col-sm-4 d-grid">
+                                <button type="submit" class="btn btn-dark btn-sm">Suscribirme
+                                </button>
+                            </div>
+
+                            <!-- Contenedor del mensaje de validación -->
+                            <div class="col-12 mensaje-validacion alert d-none mt-3 mb-0" role="alert"></div>
+
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================================
+         FOOTER
+         ============================================================ -->
+        <footer class="bg-white border-top pt-5">
+            <div class="container">
+
+                <div class="row g-4 pb-5">
+
+                    <div class="col-6 col-md-3">
+                        <h2 class="h6 text-uppercase tracking-wide mb-3">Ayuda</h2>
+                        <ul class="list-unstyled d-grid gap-2 small mb-0">
+                            <li><a class="link-secondary text-decoration-none" href="#">Contacto</a></li>
+                            <li><a class="link-secondary text-decoration-none" href="#">Envíos y entregas</a></li>
+                            <li><a class="link-secondary text-decoration-none" href="#">Devoluciones</a></li>
+                            <li><a class="link-secondary text-decoration-none" href="#">Preguntas frecuentes</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-6 col-md-3">
+                        <h2 class="h6 text-uppercase tracking-wide mb-3">Guía de compra</h2>
+                        <ul class="list-unstyled d-grid gap-2 small mb-0">
+                            <li><a class="link-secondary text-decoration-none" href="#">Tallas</a></li>
+                            <li><a class="link-secondary text-decoration-none" href="#">Cuidado de las prendas</a></li>
+                            <li><a class="link-secondary text-decoration-none" href="#">Materiales</a></li>
+                            <li><a class="link-secondary text-decoration-none" href="#">Tarjetas regalo</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-6 col-md-3">
+                        <h2 class="h6 text-uppercase tracking-wide mb-3">Legal</h2>
+                        <ul class="list-unstyled d-grid gap-2 small mb-0">
+                            <li><a class="link-secondary text-decoration-none" href="#">Aviso legal</a></li>
+                            <li><a class="link-secondary text-decoration-none" href="#">Privacidad</a></li>
+                            <li><a class="link-secondary text-decoration-none" href="#">Cookies</a></li>
+                            <li><a class="link-secondary text-decoration-none" href="#">Términos y condiciones</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-6 col-md-3">
+                        <h2 class="h6 text-uppercase tracking-wide mb-3">Redes sociales</h2>
+                        <ul class="list-unstyled d-grid gap-2 small mb-0">
+                            <li><a class="link-secondary text-decoration-none" href="#">Instagram</a></li>
+                            <li><a class="link-secondary text-decoration-none" href="#">TikTok</a></li>
+                            <li><a class="link-secondary text-decoration-none" href="#">Pinterest</a></li>
+                            <li><a class="link-secondary text-decoration-none" href="#">YouTube</a></li>
+                        </ul>
+                    </div>
+
+                </div>
+
+                <div class="border-top py-4 d-flex flex-column flex-md-row justify-content-between gap-2">
+                    <p class="small text-secondary mb-0">© 2026 VOID. Todos los derechos reservados.</p>
+                </div>
+
+            </div>
+        </footer>
+
+    </main>
+
+    <!-- ============================================================
+       OFF CANVAS · MENÚ MÓVIL
+       Se abre con el botón hamburguesa y sus enlaces se cierran
+       desde js/script.js.
+       ============================================================ -->
+    <aside class="offcanvas offcanvas-start" tabindex="-1" id="menuOffcanvas" aria-labelledby="menuOffcanvasLabel">
+       
+    </aside>
+
+    <!-- ============================================================
+       OFF CANVAS · CARRITO LATERAL
+       Incluye dos productos estáticos y el total de la compra.
+       ============================================================ -->
+    <aside class="offcanvas offcanvas-end" tabindex="-1" id="cartOffcanvas" aria-labelledby="cartOffcanvasLabel">
+        <div class="offcanvas-header border-bottom">
+            <h2 class="offcanvas-title text-uppercase tracking-wide" id="cartOffcanvasLabel">
+                Tu cesta <span class="text-secondary fs-6">(2)</span>
+            </h2>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Cerrar cesta"></button>
+        </div>
+
+        <div class="offcanvas-body d-flex flex-column">
+
+            <!-- Producto 1 -->
+            <div class="d-flex gap-3 pb-3 mb-3 border-bottom">
+                <img src="img/bolso.jpg" alt="Bolso Aura en color negro" class="flex-shrink-0 object-fit-cover"
+                    width="90" height="110" loading="lazy">
+                <div class="flex-grow-1">
+                    <div class="d-flex justify-content-between align-items-start">
+                        <h3 class="h6 mb-1">Bolso Aura</h3>
+                        <button type="button" class="btn btn-link text-secondary p-0 lh-1"
+                            aria-label="Eliminar Bolso Aura">
+                            &times;
+                        </button>
+                    </div>
+                    <p class="small text-secondary mb-2">Talla única · Negro</p>
+                    <p class="mb-0 fw-semibold">49,00 €</p>
+                </div>
+            </div>
+
+            <!-- Producto 2 -->
+            <div class="d-flex gap-3 pb-3 mb-3 border-bottom">
+                <img src="img/camopants.jpg" alt="Pantalón cargo Void en estampado camuflaje"
+                    class="flex-shrink-0 object-fit-cover" width="90" height="110" loading="lazy">
+                <div class="flex-grow-1">
+                    <div class="d-flex justify-content-between align-items-start">
+                        <h3 class="h6 mb-1">Pantalón Cargo</h3>
+                        <button type="button" class="btn btn-link text-secondary p-0 lh-1"
+                            aria-label="Eliminar Pantalón Cargo">
+                            &times;
+                        </button>
+                    </div>
+                    <p class="small text-secondary mb-2">Talla M · Camuflaje</p>
+                    <p class="mb-0 fw-semibold">50,00 €</p>
+                </div>
+            </div>
+
+            <!-- Total y acción de compra -->
+            <div class="mt-auto pt-4 border-top">
+                <div class="d-flex justify-content-between mb-2">
+                    <span class="text-uppercase small tracking-wide">Total</span>
+                    <strong>99,00 €</strong>
+                </div>
+                <p class="small text-secondary mb-4">Envío y devoluciones gratuitos en pedidos superiores a 35 €.</p>
+                <button type="button" class="btn btn-dark w-100">Tramitar pedido</button>
+                <button type="button" id="cerrarCarrito"
+                    class="btn btn-link link-secondary w-100 mt-2 text-decoration-none">
+                    Seguir comprando
+                </button>
+            </div>
+
+        </div>
+    </aside>
+
+    <!-- Bootstrap con Popper incluido + nuestro JavaScript -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

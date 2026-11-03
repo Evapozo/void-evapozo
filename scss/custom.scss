@@ -1,0 +1,17 @@
+// ============================================================
+// VOID · Archivo principal de Sass
+// Compilar este archivo con Live Sass Compiler.
+// Resultado: css/custom.css
+// ============================================================
+
+// 1. Variables del UI Kit (colores, fuentes y bordes).
+@import "variables";
+
+// 2. Bootstrap 5.3 completo desde la copia local de scss/bootstrap.
+@import "bootstrap/bootstrap";
+
+// 3. Retoques propios de botones y marca.
+@import "botones";
+
+// 4. Retoques propios del header.
+@import "header";

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Accede a tu cuenta VOID.">
+  <title>Iniciar sesión · VOID</title>
+
+  <!-- CSS generado con Sass a partir de scss/custom.scss -->
+  <link rel="stylesheet" href="css/custom.css">
+</head>
+<body>
+
+  <!-- ============================================================
+       BARRA SUPERIOR MINIMALISTA
+       ============================================================ -->
+  <header class="bg-white border-bottom">
+    <nav class="navbar py-3" aria-label="Barra de navegación de acceso">
+      <div class="container position-relative">
+
+        <a class="link-dark text-decoration-none small text-uppercase tracking-wide" href="index.html"
+           aria-label="Volver a la tienda">
+          <span aria-hidden="true">←</span> <span class="d-none d-sm-inline">Volver a la tienda</span>
+        </a>
+
+        <a class="navbar-brand position-absolute top-50 start-50 translate-middle m-0 py-0 brand-void"
+           href="index.html" aria-label="VOID, ir a la página principal">
+          VOID
+        </a>
+
+        <span class="d-none d-sm-inline small text-secondary tracking-wide">ES / EUR</span>
+
+      </div>
+    </nav>
+  </header>
+
+  <!-- ============================================================
+       FORMULARIO DE ACCESO
+       Contenedor centrado vertical y horizontalmente.
+       ============================================================ -->
+  <main class="min-vh-100 d-flex align-items-center py-5">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-12 col-sm-9 col-md-6 col-lg-4">
+
+          <div class="card border-0 shadow-sm">
+            <div class="card-body p-4 p-md-5">
+
+              <p class="small text-uppercase text-secondary tracking-wide mb-2">Mi cuenta</p>
+              <h1 class="h3 mb-2">Iniciar sesión</h1>
+              <p class="small text-secondary mb-4">
+                Accede para consultar tus pedidos y guardar tus prendas favoritas.
+              </p>
+
+              <!-- Formulario validado desde js/script.js -->
+              <form id="formLogin" class="form-validable" novalidate
+                    data-mensaje-ok="Acceso correcto. Bienvenido de nuevo a VOID.">
+
+                <div class="mb-3">
+                  <label for="emailLogin" class="form-label text-uppercase text-secondary">
+                    Correo electrónico
+                  </label>
+                  <input type="email" class="form-control" id="emailLogin" name="email"
+                         placeholder="tu@email.com" autocomplete="email" required>
+                  <div class="invalid-feedback">Introduce un correo electrónico válido.</div>
+                </div>
+
+                <div class="mb-3">
+                  <label for="passwordLogin" class="form-label text-uppercase text-secondary">
+                    Contraseña
+                  </label>
+                  <input type="password" class="form-control" id="passwordLogin" name="password"
+                         placeholder="Mínimo 6 caracteres" autocomplete="current-password"
+                         minlength="6" required>
+                  <div class="invalid-feedback">La contraseña debe tener al menos 6 caracteres.</div>
+                </div>
+
+                <div class="form-check mb-4">
+                  <input class="form-check-input" type="checkbox" id="recordarSesion">
+                  <label class="form-check-label small" for="recordarSesion">Recordar sesión</label>
+                </div>
+
+                <button type="submit" class="btn btn-dark w-100 py-3">Entrar</button>
+
+                <!-- Contenedor del mensaje de validación -->
+                <div class="mensaje-validacion alert d-none mt-3 mb-0" role="alert"></div>
+
+              </form>
+
+              <p class="small text-center text-secondary mt-4 mb-0">
+                <a class="link-secondary" href="#">¿Has olvidado tu contraseña?</a>
+              </p>
+
+            </div>
+          </div>
+
+          <p class="small text-center text-secondary mt-4 mb-0">
+            ¿No tienes cuenta? <a class="link-dark" href="#">Crear cuenta</a>
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Bootstrap con Popper incluido + nuestro JavaScript -->
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>

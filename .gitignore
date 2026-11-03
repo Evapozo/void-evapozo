@@ -1,0 +1,14 @@
+# Dependencias y entornos
+node_modules/
+.env
+.env.*
+!.env.example
+
+# Archivos del sistema operativo
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Mapas de depuración
+*.css.map
+*.js.map
