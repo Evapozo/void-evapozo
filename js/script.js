@@ -1,12 +1,11 @@
 // ============================================================
-// VOID · script.js
 // Funciones:
 //   1. Validación de los formularios (newsletter y login).
 //   2. Control de los Offcanvas y de la cabecera al hacer scroll.
 // ============================================================
 
 // ------------------------------------------------------------
-// FUNCIÓN 1 · Validación de formularios
+// FUNCIÓN 1: Validación de formularios
 // Busca todos los formularios con la clase .form-validable,
 // evita el envío real y comprueba los campos con checkValidity().
 // ------------------------------------------------------------
@@ -43,7 +42,7 @@ function configurarValidacion() {
 }
 
 // ------------------------------------------------------------
-// FUNCIÓN 2 · Offcanvas y cabecera dinámica
+// FUNCIÓN 2: Offcanvas y cabecera dinámica
 // El botón de la barra abre la cesta con data-bs-toggle.
 // Desde JavaScript cerramos la cesta con "Seguir comprando",
 // cerramos el menú al elegir categoría y cambiamos el color

@@ -1,14 +1,14 @@
 # VOID · Práctica de maquetación
 
-E-commerce de moda minimalista realizado con **HTML5, Sass y Bootstrap 5.3**.
-El proyecto es mobile-first y usa la rejilla de 12 columnas, componentes nativos de
-Bootstrap y un Offcanvas para el carrito.
+Plataforma de moda desarrollada con HTML5, Sass y Bootstrap 5.3** bajo arquitectura mobile-first. 
+
+El sitio aprovecha el sistema de rejilla y utilidades de Bootstrap para ofrecer una experiencia editorial, complementada con paneles Offcanvas nativos de Bootstrap tanto para el carrito de compras como para una interfaz de búsqueda interactiva con prendas sugeridas.
 
 ## Estructura
 
 ```
 void/
-├── index.html              → Home: navbar, hero, newsletter y footer
+├── index.html              → Home: navbar, hero, categorías, newsletter, footer y paneles offcanvas
 ├── login.html              → Acceso de usuario, formulario
 ├── css/
 │   ├── custom.css          → CSS compilado desde Sass
@@ -25,15 +25,12 @@ void/
 │   ├── bootstrap.bundle.min.js
 │   └── script.js           → Validación de formularios + control de Offcanvas + cabecera dinámica
 ├── img/                    → Imágenes locales
-├── LICENSE-BOOTSTRAP-ICONS.txt → Licencia de Bootstrap Icons
 ├── .gitignore 
 └── .vscode/settings.json   → Configuración de Live Sass Compiler
 ```
 
-## Capturas de validacion
-![Validacion del html](img/readme/image.png)
+## Capturas de validación
+![Validación de index.html](img/readme/validacion-index.png)
+![Validación de login.html](img/readme/validacion-login.png)
+![Validación de custom.css](img/readme/validacion-css.png)
 
-## Créditos
-
-- Iconos: [Bootstrap Icons](https://icons.getbootstrap.com/) v1.13.2, licencia MIT.
-  Consulta `LICENSE-BOOTSTRAP-ICONS.txt` para el texto completo.

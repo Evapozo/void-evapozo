@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="VOID · Moda de lujo minimalista. Colecciones de mujer y hombre.">
-    <title>VOID · Moda minimalista</title>
+    <meta name="description" content="VOID · Moda urbana minimalista. Colecciones de mujer y hombre.">
+    <title>VOID · Moda urbana minimalista</title>
 
     <!-- Bootstrap Icons local + CSS generado con Sass -->
     <link rel="stylesheet" href="css/bootstrap-icons.min.css">
@@ -13,7 +13,6 @@
 </head>
 
 <body>
-
     <!-- ============================================================
        HEADER DINÁMICO
        Empieza transparente sobre el hero y pasa a blanco al hacer scroll (js/script.js).
@@ -24,6 +23,8 @@
             <div class="container-fluid px-3 px-lg-4 position-relative">
 
                 <!-- Zona izquierda: menú móvil + categorías de escritorio -->
+                 <!-- El botón hamburguesa abre el menú lateral (Offcanvas) 
+                  en todas las resoluciones, complementado en el escritorio por accesos directos Mujer/Hombre. -->
                 <div class="d-flex align-items-center gap-3">
                     <button class="btn btn-link p-0 header-btn" type="button" data-bs-toggle="offcanvas"
                         data-bs-target="#menuOffcanvas" aria-controls="menuOffcanvas" aria-label="Abrir menú">
@@ -57,7 +58,7 @@
                             <li><a class="dropdown-item small" href="#">Reino Unido · GBP</a></li>
                         </ul>
                     </div>
-                    <!--boton de busqueda que redirige al overlay de busqueda-->
+                    <!--boton de busqueda que abre el overlay de busqueda-->
                     <button class="btn btn-link p-0 header-btn" type="button" data-bs-toggle="offcanvas"
                         data-bs-target="#searchOverlay" aria-controls="searchOverlay" aria-label="Buscar">
                         <i class="bi bi-search fs-5 lh-1" aria-hidden="true"></i>
@@ -67,7 +68,7 @@
                         <i class="bi bi-person fs-5 lh-1" aria-hidden="true"></i>
                     </a>
                     <!-- Botón del carrito -->
-                    <!-- El número de productos en la cesta es fijo, deberia actualizarse con javascript -->
+                    <!-- el contenido del carrito es estático para la maquetación -->
                     <button class="btn btn-link position-relative p-0 header-btn" type="button"
                         data-bs-toggle="offcanvas" data-bs-target="#cartOffcanvas" aria-controls="cartOffcanvas"
                         aria-label="Abrir cesta de la compra, 2 productos">
@@ -85,7 +86,7 @@
 
     <main>
         <!-- Título principal para SEO -->
-        <h1 class="visually-hidden">VOID · Moda minimalista</h1>
+        <h1 class="visually-hidden">VOID · Moda urbana minimalista</h1>
 
         <!-- ============================================================
         HERO · Pantalla completa y dos columnas hombre/mujer
@@ -103,7 +104,7 @@
                             alt="Bolso de la colección de mujer VOID">
                         <div class="position-absolute top-0 start-0 w-100 h-100 bg-black opacity-50"></div>
 
-                        <!-- Botón individual de Mujer: visible únicamente en escritorio (PC) -->
+                        <!-- Botón individual de Mujer: visible únicamente en escritorio -->
                         <a href="#pills-mujer"
                             class="btn btn-light position-absolute bottom-0 start-50 translate-middle-x mb-5 px-5 py-3 d-none d-md-inline-block z-2">
                             Mujer
@@ -117,7 +118,7 @@
                             alt="Pantalón de la colección de hombre VOID">
                         <div class="position-absolute top-0 start-0 w-100 h-100 bg-black opacity-50"></div>
 
-                        <!-- Botón individual de Hombre: visible únicamente en escritorio (PC) -->
+                        <!-- Botón individual de Hombre: visible únicamente en escritorio  -->
                         <a href="#pills-hombre"
                             class="btn btn-light position-absolute bottom-0 start-50 translate-middle-x mb-5 px-5 py-3 d-none d-md-inline-block z-2">
                             Hombre
@@ -156,7 +157,7 @@
                         </p>
 
                         <form id="formNewsletter" class="form-validable row g-2 justify-content-center" novalidate
-                            data-mensaje-ok="¡Gracias! Ya estas suscrito.">
+                            data-mensaje-ok="¡Gracias! Ya estás suscrito.">
 
                             <div class="col-12 col-sm-8">
                                 <label for="emailNewsletter" class="visually-hidden">Correo electrónico</label>
@@ -179,55 +180,56 @@
                 </div>
             </div>
         </section>
+    </main>
 
-        <!-- ============================================================
-         FOOTER (antes de offcanvas, modal y scripts)
+    <!-- ============================================================
+         FOOTER (antes de offcanvas y scripts)
          ============================================================ -->
-        <footer class="bg-white border-top pt-5">
-            <div class="container">
+    <footer class="bg-white border-top pt-5">
+        <div class="container">
 
-                <div class="row justify-content-center g-4 pb-5">
+            <div class="row justify-content-center g-4 pb-5">
 
-                    <div class="col-6 col-md-3">
-                        <h2 class="h6 text-uppercase tracking-wide mb-3">Ayuda</h2>
-                        <ul class="list-unstyled d-grid gap-2 small mb-0">
-                            <li><a class="link-secondary text-decoration-none" href="#">Contacto</a></li>
-                            <li><a class="link-secondary text-decoration-none" href="#">Envíos y entregas</a></li>
-                            <li><a class="link-secondary text-decoration-none" href="#">Devoluciones</a></li>
-                            <li><a class="link-secondary text-decoration-none" href="#">Preguntas frecuentes</a></li>
-                        </ul>
-                    </div>
-
-                    <div class="col-6 col-md-3">
-                        <h2 class="h6 text-uppercase tracking-wide mb-3">Legal</h2>
-                        <ul class="list-unstyled d-grid gap-2 small mb-0">
-                            <li><a class="link-secondary text-decoration-none" href="#">Aviso legal</a></li>
-                            <li><a class="link-secondary text-decoration-none" href="#">Privacidad</a></li>
-                            <li><a class="link-secondary text-decoration-none" href="#">Cookies</a></li>
-                            <li><a class="link-secondary text-decoration-none" href="#">Términos y condiciones</a></li>
-                        </ul>
-                    </div>
-
-                    <div class="col-6 col-md-3">
-                        <h2 class="h6 text-uppercase tracking-wide mb-3">Redes sociales</h2>
-                        <ul class="list-unstyled d-grid gap-2 small mb-0">
-                            <li><a class="link-secondary text-decoration-none" href="#">Instagram</a></li>
-                            <li><a class="link-secondary text-decoration-none" href="#">TikTok</a></li>
-                            <li><a class="link-secondary text-decoration-none" href="#">Pinterest</a></li>
-                            <li><a class="link-secondary text-decoration-none" href="#">YouTube</a></li>
-                        </ul>
-                    </div>
-
+                <div class="col-6 col-md-3">
+                    <h2 class="h6 text-uppercase tracking-wide mb-3">Ayuda</h2>
+                    <ul class="list-unstyled d-grid gap-2 small mb-0">
+                        <li><a class="link-secondary text-decoration-none" href="#">Contacto</a></li>
+                        <li><a class="link-secondary text-decoration-none" href="#">Envíos y entregas</a></li>
+                        <li><a class="link-secondary text-decoration-none" href="#">Devoluciones</a></li>
+                        <li><a class="link-secondary text-decoration-none" href="#">Preguntas frecuentes</a></li>
+                    </ul>
                 </div>
 
-                <div class="border-top py-4 d-flex flex-column flex-md-row justify-content-between gap-2">
-                    <p class="small text-secondary mb-0">© 2026 VOID. Todos los derechos reservados.</p>
+                <div class="col-6 col-md-3">
+                    <h2 class="h6 text-uppercase tracking-wide mb-3">Legal</h2>
+                    <ul class="list-unstyled d-grid gap-2 small mb-0">
+                        <li><a class="link-secondary text-decoration-none" href="#">Aviso legal</a></li>
+                        <li><a class="link-secondary text-decoration-none" href="#">Privacidad</a></li>
+                        <li><a class="link-secondary text-decoration-none" href="#">Cookies</a></li>
+                        <li><a class="link-secondary text-decoration-none" href="#">Términos y condiciones</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-6 col-md-3">
+                    <h2 class="h6 text-uppercase tracking-wide mb-3">Redes sociales</h2>
+                    <ul class="list-unstyled d-grid gap-2 small mb-0">
+                        <li><a class="link-secondary text-decoration-none" href="#">Instagram</a></li>
+                        <li><a class="link-secondary text-decoration-none" href="#">TikTok</a></li>
+                        <li><a class="link-secondary text-decoration-none" href="#">Pinterest</a></li>
+                        <li><a class="link-secondary text-decoration-none" href="#">YouTube</a></li>
+                    </ul>
                 </div>
 
             </div>
-        </footer>
 
-    </main>
+            <div class="border-top py-4 d-flex flex-column flex-md-row justify-content-between gap-2">
+                <p class="small text-secondary mb-0">© 2026 VOID. Todos los derechos reservados.</p>
+            </div>
+
+        </div>
+    </footer>
+
+
 
     <!-- ============================================================
        OFF CANVAS · MENÚ MÓVIL
@@ -242,7 +244,7 @@
 
         <div class="offcanvas-body d-flex flex-column p-4">
 
-            <!-- Pestañas Hombre / Mujer con nav tabs pills de bootstrap-->
+            <!-- Pestañas Hombre / Mujer con nav tabs pills de Bootstrap-->
             <ul class="nav nav-pills nav-fill gap-2 mb-4" id="pills-tab" role="tablist">
                 <li class="nav-item" role="presentation">
                     <button class="nav-link active text-uppercase tracking-wide rounded-0 py-2" id="pills-mujer-tab"
@@ -265,26 +267,26 @@
                 <!-- Panel Mujer -->
                 <div class="tab-pane fade show active" id="pills-mujer" role="tabpanel"
                     aria-labelledby="pills-mujer-tab">
-                    <nav class="nav flex-column gap-0">
+                    <nav class="nav flex-column gap-0" aria-label="Categorías de la tienda">
                         <a class="nav-link px-0 text-dark text-uppercase small tracking-wide" href="#mujer">Ver todo
                             Mujer</a>
                         <a class="nav-link px-0 text-dark text-uppercase small tracking-wide"
-                            href="#mujer-coleccion">Colección</a>
+                            href="#coleccion-mujer">Colección</a>
                         <!--Subcategorias dentro de colección-->
                         <div class="d-flex flex-column gap-0 ps-3 border-start">
-                            <a class="nav-link px-0 text-muted small tracking-wide"
+                            <a class="nav-link px-0 text-secondary small tracking-wide"
                                 href="#camisetas-mujer">Camisetas</a>
-                            <a class="nav-link px-0 text-muted small tracking-wide" href="#hoodies-mujer">Hoodies</a>
-                            <a class="nav-link px-0 text-muted small tracking-wide"
+                            <a class="nav-link px-0 text-secondary small tracking-wide" href="#hoodies-mujer">Hoodies</a>
+                            <a class="nav-link px-0 text-secondary small tracking-wide"
                                 href="#pantalones-mujer">Pantalones</a>
-                            <a class="nav-link px-0 text-muted small tracking-wide" href="#Jeans-mujer">Jeans</a>
-                            <a class="nav-link px-0 text-muted small tracking-wide" href="#calzado-mujer">Calzado</a>
-                            <a class="nav-link px-0 text-muted small tracking-wide"
+                            <a class="nav-link px-0 text-secondary small tracking-wide" href="#jeans-mujer">Jeans</a>
+                            <a class="nav-link px-0 text-secondary small tracking-wide" href="#calzado-mujer">Calzado</a>
+                            <a class="nav-link px-0 text-secondary small tracking-wide"
                                 href="#accesorios-mujer">Accesorios</a>
                         </div>
-                        <a class="nav-link px-0 text-muted text-uppercase small tracking-wide"
+                        <a class="nav-link px-0 text-secondary text-uppercase small tracking-wide"
                             href="#novedades-mujer">Novedades</a>
-                        <!--bootstrap para ver el texto rojo-->
+                        <!--Bootstrap para ver el texto rojo-->
                         <a class="nav-link px-0 text-danger text-uppercase small tracking-wide"
                             href="#promociones-mujer">
                             Promociones
@@ -294,23 +296,23 @@
 
                 <!-- Panel Hombre -->
                 <div class="tab-pane fade" id="pills-hombre" role="tabpanel" aria-labelledby="pills-hombre-tab">
-                    <nav class="nav flex-column gap-0">
+                    <nav class="nav flex-column gap-0" aria-label="Categorías de la tienda">
                         <a class="nav-link px-0 text-dark text-uppercase small tracking-wide" href="#hombre">Ver todo
                             Hombre</a>
                         <a class="nav-link px-0 text-dark text-uppercase small tracking-wide"
                             href="#coleccion-hombre">Colección</a>
                         <div class="d-flex flex-column gap-0 ps-3 border-start">
-                            <a class="nav-link px-0 text-muted small tracking-wide"
+                            <a class="nav-link px-0 text-secondary small tracking-wide"
                                 href="#camisetas-hombre">Camisetas</a>
-                            <a class="nav-link px-0 text-muted small tracking-wide" href="#hoodies-hombre">Hoodies</a>
-                            <a class="nav-link px-0 text-muted small tracking-wide"
+                            <a class="nav-link px-0 text-secondary small tracking-wide" href="#hoodies-hombre">Hoodies</a>
+                            <a class="nav-link px-0 text-secondary small tracking-wide"
                                 href="#pantalones-hombre">Pantalones</a>
-                            <a class="nav-link px-0 text-muted small tracking-wide" href="#jeans-hombre">Jeans</a>
-                            <a class="nav-link px-0 text-muted small tracking-wide" href="#calzado-hombre">Calzado</a>
-                            <a class="nav-link px-0 text-muted small tracking-wide"
+                            <a class="nav-link px-0 text-secondary small tracking-wide" href="#jeans-hombre">Jeans</a>
+                            <a class="nav-link px-0 text-secondary small tracking-wide" href="#calzado-hombre">Calzado</a>
+                            <a class="nav-link px-0 text-secondary small tracking-wide"
                                 href="#accesorios-hombre">Accesorios</a>
                         </div>
-                        <a class="nav-link px-0 text-muted text-uppercase small tracking-wide"
+                        <a class="nav-link px-0 text-secondary text-uppercase small tracking-wide"
                             href="#novedades-hombre">Novedades</a>
                         <a class="nav-link px-0 text-danger text-uppercase small tracking-wide"
                             href="#promociones-hombre">
@@ -387,8 +389,9 @@
         </div>
     </aside>
     <!-- ============================================================
-     OVERLAY DE BÚSQUEDA  con Bootstrap
+     OVERLAY DE BÚSQUEDA con Bootstrap
      ============================================================ -->
+     <!--he usado aside, considero que podría ser div-->
     <aside class="offcanvas offcanvas-top vh-100 bg-white" tabindex="-1" id="searchOverlay"
         aria-labelledby="searchOverlayLabel">
 
@@ -398,7 +401,7 @@
             <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Cerrar búsqueda"></button>
         </div>
 
-        <!-- Cuerpo: Todo dentro del mismo contenedor centrado a 880px -->
+        <!-- Cuerpo: Todo dentro del mismo contenedor centrado a 1100px -->
         <div class="offcanvas-body d-flex flex-column align-items-center pt-4 px-3">
             <div class="w-100" style="max-width: 1100px;">
 
@@ -426,7 +429,7 @@
                 </div>
 
                 <!-- Título alineado con el ancho de las tarjetas -->
-                <h3 class="fs-6 text-uppercase tracking-wide text-secondary mb-3">Prendas populares</h3>
+                <h2 class="fs-6 text-uppercase tracking-wide text-secondary mb-3">Prendas populares</h2>
 
                 <!-- 4 tarjetas en una sola fila  -->
                 <div class="row row-cols-2 row-cols-md-4 g-3 g-md-4">
@@ -438,7 +441,7 @@
                             <img src="img/bolso.jpg" alt="Bolso" class="w-100 object-fit-cover mb-2"
                                 style="aspect-ratio: 3/4;" loading="lazy">
                             <div class="card-body p-0">
-                                <h4 class="h6 mb-1 text-truncate">Bolso</h4>
+                                <h3 class="h6 mb-1 text-truncate">Bolso</h3>
                                 <p class="small text-secondary mb-0">49,00 €</p>
                             </div>
                         </a>
@@ -451,7 +454,7 @@
                             <img src="img/cargo.jpg" alt="Pantalón Cargo" class="w-100 object-fit-cover mb-2"
                                 style="aspect-ratio: 3/4;" loading="lazy">
                             <div class="card-body p-0">
-                                <h4 class="h6 mb-1 text-truncate">Pantalón Cargo</h4>
+                                <h3 class="h6 mb-1 text-truncate">Pantalón Cargo</h3>
                                 <p class="small text-secondary mb-0">50,00 €</p>
                             </div>
                         </a>
@@ -464,7 +467,7 @@
                             <img src="img/jogger.jpg" alt="Jogger" class="w-100 object-fit-cover mb-2"
                                 style="aspect-ratio: 3/4;" loading="lazy">
                             <div class="card-body p-0">
-                                <h4 class="h6 mb-1 text-truncate">Jogger</h4>
+                                <h3 class="h6 mb-1 text-truncate">Jogger</h3>
                                 <p class="small text-secondary mb-0">39,00 €</p>
                             </div>
                         </a>
@@ -477,7 +480,7 @@
                             <img src="img/abrigo.jpg" alt="Abrigo" class="w-100 object-fit-cover mb-2"
                                 style="aspect-ratio: 3/4;" loading="lazy">
                             <div class="card-body p-0">
-                                <h4 class="h6 mb-1 text-truncate">Abrigo</h4>
+                                <h3 class="h6 mb-1 text-truncate">Abrigo</h3>
                                 <p class="small text-secondary mb-0">70,00 €</p>
                             </div>
                         </a>
