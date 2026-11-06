@@ -30,7 +30,11 @@ void/
 ```
 
 ## Capturas de validación
+
+Validación de index.html:
 ![Validación de index.html](img/readme/validacion-index.png)
+Validación de login.html:
 ![Validación de login.html](img/readme/validacion-login.png)
+Validación de custom.css:
 ![Validación de custom.css](img/readme/validacion-css.png)
 
