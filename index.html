@@ -5,9 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="VOID · Moda de lujo minimalista. Colecciones de mujer y hombre.">
-    <title>VOID · Moda de lujo minimalista</title>
+    <title>VOID · Moda minimalista</title>
 
-    <!-- CSS generado con Sass a partir de scss/custom.scss -->
+    <!-- Bootstrap Icons local + CSS generado con Sass -->
+    <link rel="stylesheet" href="css/bootstrap-icons.min.css">
     <link rel="stylesheet" href="css/custom.css">
 </head>
 
@@ -16,7 +17,7 @@
     <!-- ============================================================
        HEADER DINÁMICO
        Empieza transparente sobre el hero y pasa a blanco al hacer scroll (js/script.js).
-       Iconos: Lucide v1.67.0 (https://lucide.dev)
+       Iconos: Bootstrap Icons v1.13.2 (https://icons.getbootstrap.com/) · licencia MIT.
        ============================================================ -->
     <header class="fixed-top w-100">
         <nav class="navbar py-3 py-lg-4" aria-label="Barra de navegación principal">
@@ -26,13 +27,7 @@
                 <div class="d-flex align-items-center gap-3">
                     <button class="btn btn-link p-0 header-btn" type="button" data-bs-toggle="offcanvas"
                         data-bs-target="#menuOffcanvas" aria-controls="menuOffcanvas" aria-label="Abrir menú">
-                        <svg class="lucide lucide-menu" xmlns="http://www.w3.org/2000/svg" width="22" height="22"
-                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                            <path d="M4 5h16" />
-                            <path d="M4 12h16" />
-                            <path d="M4 19h16" />
-                        </svg>
+                        <i class="bi bi-list fs-5 lh-1" aria-hidden="true"></i>
                     </button>
 
                     <div class="d-none d-lg-flex align-items-center gap-4">
@@ -62,37 +57,21 @@
                             <li><a class="dropdown-item small" href="#">Reino Unido · GBP</a></li>
                         </ul>
                     </div>
-
-                    <button class="btn btn-link p-0 header-btn" type="button" aria-label="Buscar">
-                        <svg class="lucide lucide-search" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
-                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                            <path d="m21 21-4.34-4.34" />
-                            <circle cx="11" cy="11" r="8" />
-                        </svg>
+                    <!--boton de busqueda que redirige al overlay de busqueda-->
+                    <button class="btn btn-link p-0 header-btn" type="button" data-bs-toggle="offcanvas"
+                        data-bs-target="#searchOverlay" aria-controls="searchOverlay" aria-label="Buscar">
+                        <i class="bi bi-search fs-5 lh-1" aria-hidden="true"></i>
                     </button>
 
                     <a class="header-link d-inline-flex align-items-center" href="login.html" aria-label="Mi perfil">
-                        <svg class="lucide lucide-user" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
-                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                            <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" />
-                            <circle cx="12" cy="7" r="4" />
-                        </svg>
+                        <i class="bi bi-person fs-5 lh-1" aria-hidden="true"></i>
                     </a>
                     <!-- Botón del carrito -->
                     <!-- El número de productos en la cesta es fijo, deberia actualizarse con javascript -->
                     <button class="btn btn-link position-relative p-0 header-btn" type="button"
                         data-bs-toggle="offcanvas" data-bs-target="#cartOffcanvas" aria-controls="cartOffcanvas"
                         aria-label="Abrir cesta de la compra, 2 productos">
-                        <svg class="lucide lucide-shopping-bag" xmlns="http://www.w3.org/2000/svg" width="20"
-                            height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                            <path d="M16 10a4 4 0 0 1-8 0" />
-                            <path d="M3.103 6.034h17.794" />
-                            <path
-                                d="M3.4 5.467a2 2 0 0 0-.4 1.2V20a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6.667a2 2 0 0 0-.4-1.2l-2-2.667A2 2 0 0 0 17 2H7a2 2 0 0 0-1.6.8z" />
-                        </svg>
+                        <i class="bi bi-bag fs-5 lh-1" aria-hidden="true"></i>
                         <span
                             class="position-absolute top-0 start-100 translate-middle badge rounded-pill header-cart-badge">
                             2
@@ -105,46 +84,61 @@
     </header>
 
     <main>
-
         <!-- Título principal para SEO -->
         <h1 class="visually-hidden">VOID · Moda minimalista</h1>
 
         <!-- ============================================================
-         HERO · Pantalla completa y dos columnas sin separación
-         Móvil: solo mujer (col-12).
-         Escritorio: mujer y hombre al 50% (col-md-6).
-         ============================================================ -->
-        <section aria-label="Colecciones destacadas">
-            <div class="container-fluid g-0">
-                <div class="row g-0">
+        HERO · Pantalla completa y dos columnas hombre/mujer
+        Móvil: imagen de mujer de fondo (col-12) con ambos botones centrados.
+        Escritorio: mujer y hombre al 50% con sus botones correspondientes.
+        ============================================================ -->
+        <section aria-label="Colecciones destacadas" class="position-relative vh-100 overflow-hidden">
+            <div class="container-fluid g-0 h-100">
+                <div class="row g-0 h-100">
 
-                    <!-- Columna Mujer -->
-                    <div id="mujer" class="col-12 col-md-6 position-relative vh-100 overflow-hidden">
+                    <!-- Columna Mujer: fondo en móvil y 50% en escritorio -->
+                    <div id="mujer" class="col-12 col-md-6 position-relative h-100 overflow-hidden">
                         <img src="img/cat-mujer.jpg"
                             class="position-absolute top-0 start-0 w-100 h-100 object-fit-cover"
                             alt="Bolso de la colección de mujer VOID">
                         <div class="position-absolute top-0 start-0 w-100 h-100 bg-black opacity-50"></div>
-                        <a href="#"
-                            class="btn btn-light position-absolute bottom-0 start-50 translate-middle-x mb-5 px-5 py-3">
+
+                        <!-- Botón individual de Mujer: visible únicamente en escritorio (PC) -->
+                        <a href="#pills-mujer"
+                            class="btn btn-light position-absolute bottom-0 start-50 translate-middle-x mb-5 px-5 py-3 d-none d-md-inline-block z-2">
                             Mujer
                         </a>
                     </div>
 
                     <!-- Columna Hombre: oculta en móvil, visible desde md -->
-                    <div id="hombre" class="col-md-6 d-none d-md-block position-relative vh-100 overflow-hidden">
+                    <div id="hombre" class="col-md-6 d-none d-md-block position-relative h-100 overflow-hidden">
                         <img src="img/cat-hombre.jpg"
                             class="position-absolute top-0 start-0 w-100 h-100 object-fit-cover"
                             alt="Pantalón de la colección de hombre VOID">
                         <div class="position-absolute top-0 start-0 w-100 h-100 bg-black opacity-50"></div>
-                        <a href="#"
-                            class="btn btn-light position-absolute bottom-0 start-50 translate-middle-x mb-5 px-5 py-3">
+
+                        <!-- Botón individual de Hombre: visible únicamente en escritorio (PC) -->
+                        <a href="#pills-hombre"
+                            class="btn btn-light position-absolute bottom-0 start-50 translate-middle-x mb-5 px-5 py-3 d-none d-md-inline-block z-2">
                             Hombre
                         </a>
                     </div>
 
                 </div>
             </div>
+
+            <!-- Contenedor flotante exclusivo para móvil: muestra ambos botones centrados sobre la pantalla -->
+            <div
+                class="position-absolute bottom-0 start-50 translate-middle-x mb-5 d-flex gap-2 d-md-none z-2 w-100 justify-content-center px-3">
+                <a href="#pills-mujer" class="btn btn-light px-4 py-3 flex-fill text-center">
+                    Mujer
+                </a>
+                <a href="#pills-hombre" class="btn btn-light px-4 py-3 flex-fill text-center">
+                    Hombre
+                </a>
+            </div>
         </section>
+
 
         <!-- ============================================================
          NEWSLETTER
@@ -162,7 +156,7 @@
                         </p>
 
                         <form id="formNewsletter" class="form-validable row g-2 justify-content-center" novalidate
-                            data-mensaje-ok="¡Gracias! Ya formas parte de VOID.">
+                            data-mensaje-ok="¡Gracias! Ya estas suscrito.">
 
                             <div class="col-12 col-sm-8">
                                 <label for="emailNewsletter" class="visually-hidden">Correo electrónico</label>
@@ -187,7 +181,7 @@
         </section>
 
         <!-- ============================================================
-         FOOTER
+         FOOTER (antes de offcanvas, modal y scripts)
          ============================================================ -->
         <footer class="bg-white border-top pt-5">
             <div class="container">
@@ -271,25 +265,57 @@
                 <!-- Panel Mujer -->
                 <div class="tab-pane fade show active" id="pills-mujer" role="tabpanel"
                     aria-labelledby="pills-mujer-tab">
-                    <nav class="nav flex-column gap-3">
+                    <nav class="nav flex-column gap-0">
                         <a class="nav-link px-0 text-dark text-uppercase small tracking-wide" href="#mujer">Ver todo
                             Mujer</a>
+                        <a class="nav-link px-0 text-dark text-uppercase small tracking-wide"
+                            href="#mujer-coleccion">Colección</a>
+                        <!--Subcategorias dentro de colección-->
+                        <div class="d-flex flex-column gap-0 ps-3 border-start">
+                            <a class="nav-link px-0 text-muted small tracking-wide"
+                                href="#camisetas-mujer">Camisetas</a>
+                            <a class="nav-link px-0 text-muted small tracking-wide" href="#hoodies-mujer">Hoodies</a>
+                            <a class="nav-link px-0 text-muted small tracking-wide"
+                                href="#pantalones-mujer">Pantalones</a>
+                            <a class="nav-link px-0 text-muted small tracking-wide" href="#Jeans-mujer">Jeans</a>
+                            <a class="nav-link px-0 text-muted small tracking-wide" href="#calzado-mujer">Calzado</a>
+                            <a class="nav-link px-0 text-muted small tracking-wide"
+                                href="#accesorios-mujer">Accesorios</a>
+                        </div>
                         <a class="nav-link px-0 text-muted text-uppercase small tracking-wide"
                             href="#novedades-mujer">Novedades</a>
-                        <a class="nav-link px-0 text-muted text-uppercase small tracking-wide"
-                            href="#coleccion-mujer">Colección</a>
+                        <!--bootstrap para ver el texto rojo-->
+                        <a class="nav-link px-0 text-danger text-uppercase small tracking-wide"
+                            href="#promociones-mujer">
+                            Promociones
+                        </a>
                     </nav>
                 </div>
 
                 <!-- Panel Hombre -->
                 <div class="tab-pane fade" id="pills-hombre" role="tabpanel" aria-labelledby="pills-hombre-tab">
-                    <nav class="nav flex-column gap-3">
+                    <nav class="nav flex-column gap-0">
                         <a class="nav-link px-0 text-dark text-uppercase small tracking-wide" href="#hombre">Ver todo
                             Hombre</a>
+                        <a class="nav-link px-0 text-dark text-uppercase small tracking-wide"
+                            href="#coleccion-hombre">Colección</a>
+                        <div class="d-flex flex-column gap-0 ps-3 border-start">
+                            <a class="nav-link px-0 text-muted small tracking-wide"
+                                href="#camisetas-hombre">Camisetas</a>
+                            <a class="nav-link px-0 text-muted small tracking-wide" href="#hoodies-hombre">Hoodies</a>
+                            <a class="nav-link px-0 text-muted small tracking-wide"
+                                href="#pantalones-hombre">Pantalones</a>
+                            <a class="nav-link px-0 text-muted small tracking-wide" href="#jeans-hombre">Jeans</a>
+                            <a class="nav-link px-0 text-muted small tracking-wide" href="#calzado-hombre">Calzado</a>
+                            <a class="nav-link px-0 text-muted small tracking-wide"
+                                href="#accesorios-hombre">Accesorios</a>
+                        </div>
                         <a class="nav-link px-0 text-muted text-uppercase small tracking-wide"
                             href="#novedades-hombre">Novedades</a>
-                        <a class="nav-link px-0 text-muted text-uppercase small tracking-wide"
-                            href="#coleccion-hombre">Colección</a>
+                        <a class="nav-link px-0 text-danger text-uppercase small tracking-wide"
+                            href="#promociones-hombre">
+                            Promociones
+                        </a>
                     </nav>
                 </div>
             </div>
@@ -313,14 +339,13 @@
 
             <!-- Producto 1 -->
             <div class="d-flex gap-3 pb-3 mb-3 border-bottom">
-                <img src="img/bolso.jpg" alt="Bolso Aura en color negro" class="flex-shrink-0 object-fit-cover"
-                    width="90" height="110" loading="lazy">
+                <img src="img/bolso.jpg" alt="Bolso en color negro" class="flex-shrink-0 object-fit-cover" width="90"
+                    height="110" loading="lazy">
                 <div class="flex-grow-1">
                     <div class="d-flex justify-content-between align-items-start">
-                        <h3 class="h6 mb-1">Bolso Aura</h3>
-                        <button type="button" class="btn btn-link text-secondary p-0 lh-1"
-                            aria-label="Eliminar Bolso Aura">
-                            &times;
+                        <h3 class="h6 mb-1">Bolso</h3>
+                        <button type="button" class="btn btn-link text-secondary p-0 lh-1" aria-label="Eliminar Bolso">
+                            <i class="bi bi-x-lg" aria-hidden="true"></i>
                         </button>
                     </div>
                     <p class="small text-secondary mb-2">Talla única · Negro</p>
@@ -330,14 +355,14 @@
 
             <!-- Producto 2 -->
             <div class="d-flex gap-3 pb-3 mb-3 border-bottom">
-                <img src="img/camopants.jpg" alt="Pantalón cargo Void en estampado camuflaje"
+                <img src="img/cargo.jpg" alt="Pantalón cargo Void en estampado camuflaje"
                     class="flex-shrink-0 object-fit-cover" width="90" height="110" loading="lazy">
                 <div class="flex-grow-1">
                     <div class="d-flex justify-content-between align-items-start">
                         <h3 class="h6 mb-1">Pantalón Cargo</h3>
                         <button type="button" class="btn btn-link text-secondary p-0 lh-1"
                             aria-label="Eliminar Pantalón Cargo">
-                            &times;
+                            <i class="bi bi-x-lg" aria-hidden="true"></i>
                         </button>
                     </div>
                     <p class="small text-secondary mb-2">Talla M · Pantalón camuflaje</p>
@@ -360,6 +385,109 @@
             </div>
 
         </div>
+    </aside>
+    <!-- ============================================================
+     OVERLAY DE BÚSQUEDA  con Bootstrap
+     ============================================================ -->
+    <aside class="offcanvas offcanvas-top vh-100 bg-white" tabindex="-1" id="searchOverlay"
+        aria-labelledby="searchOverlayLabel">
+
+        <!-- Cabecera del buscador: Marca y X para cerrar -->
+        <div class="container-fluid px-4 py-3 border-bottom d-flex justify-content-between align-items-center">
+            <span class="fs-5 fw-bold tracking-wide text-uppercase" id="searchOverlayLabel">VOID</span>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Cerrar búsqueda"></button>
+        </div>
+
+        <!-- Cuerpo: Todo dentro del mismo contenedor centrado a 880px -->
+        <div class="offcanvas-body d-flex flex-column align-items-center pt-4 px-3">
+            <div class="w-100" style="max-width: 1100px;">
+
+                <!-- Barra de búsqueda -->
+                <form action="#" method="get" class="mb-3">
+                    <div class="input-group border-bottom border-dark pb-2">
+                        <input type="search" class="form-control border-0 shadow-none px-0 fs-4 text-dark"
+                            placeholder="Buscar prendas, accesorios..." aria-label="Buscar en la tienda">
+                        <button class="btn border-0 p-0 text-dark" type="submit" aria-label="Confirmar búsqueda">
+                            <i class="bi bi-search fs-4" aria-hidden="true"></i>
+                        </button>
+                    </div>
+                </form>
+
+                <!-- Términos sugeridos -->
+                <div class="d-flex flex-wrap gap-2 text-uppercase small text-secondary mb-4">
+                    <span class="fw-bold text-dark me-2">Tendencias:</span>
+                    <a href="#camisetas" class="text-decoration-none text-secondary">Camisetas</a>
+                    <span>·</span>
+                    <a href="#hoodies" class="text-decoration-none text-secondary">Hoodies</a>
+                    <span>·</span>
+                    <a href="#cargo" class="text-decoration-none text-secondary">Cargo</a>
+                    <span>·</span>
+                    <a href="#bolsos" class="text-decoration-none text-secondary">Bolsos</a>
+                </div>
+
+                <!-- Título alineado con el ancho de las tarjetas -->
+                <h3 class="fs-6 text-uppercase tracking-wide text-secondary mb-3">Prendas populares</h3>
+
+                <!-- 4 tarjetas en una sola fila  -->
+                <div class="row row-cols-2 row-cols-md-4 g-3 g-md-4">
+
+                    <!-- Prenda 1: Bolso -->
+                    <div class="col">
+                        <a href="#bolso"
+                            class="text-decoration-none text-dark d-block card border-0 h-100 bg-transparent">
+                            <img src="img/bolso.jpg" alt="Bolso" class="w-100 object-fit-cover mb-2"
+                                style="aspect-ratio: 3/4;" loading="lazy">
+                            <div class="card-body p-0">
+                                <h4 class="h6 mb-1 text-truncate">Bolso</h4>
+                                <p class="small text-secondary mb-0">49,00 €</p>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- Prenda 2: Pantalón Cargo -->
+                    <div class="col">
+                        <a href="#cargo"
+                            class="text-decoration-none text-dark d-block card border-0 h-100 bg-transparent">
+                            <img src="img/cargo.jpg" alt="Pantalón Cargo" class="w-100 object-fit-cover mb-2"
+                                style="aspect-ratio: 3/4;" loading="lazy">
+                            <div class="card-body p-0">
+                                <h4 class="h6 mb-1 text-truncate">Pantalón Cargo</h4>
+                                <p class="small text-secondary mb-0">50,00 €</p>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- Prenda 3: Jogger -->
+                    <div class="col">
+                        <a href="#jogger"
+                            class="text-decoration-none text-dark d-block card border-0 h-100 bg-transparent">
+                            <img src="img/jogger.jpg" alt="Jogger" class="w-100 object-fit-cover mb-2"
+                                style="aspect-ratio: 3/4;" loading="lazy">
+                            <div class="card-body p-0">
+                                <h4 class="h6 mb-1 text-truncate">Jogger</h4>
+                                <p class="small text-secondary mb-0">39,00 €</p>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- Prenda 4: Abrigo -->
+                    <div class="col">
+                        <a href="#abrigo"
+                            class="text-decoration-none text-dark d-block card border-0 h-100 bg-transparent">
+                            <img src="img/abrigo.jpg" alt="Abrigo" class="w-100 object-fit-cover mb-2"
+                                style="aspect-ratio: 3/4;" loading="lazy">
+                            <div class="card-body p-0">
+                                <h4 class="h6 mb-1 text-truncate">Abrigo</h4>
+                                <p class="small text-secondary mb-0">70,00 €</p>
+                            </div>
+                        </a>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
     </aside>
 
     <!-- Bootstrap con Popper incluido + JavaScript -->

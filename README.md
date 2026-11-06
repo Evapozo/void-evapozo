@@ -11,7 +11,9 @@ void/
 ├── index.html              → Home: navbar, hero, newsletter y footer
 ├── login.html              → Acceso de usuario, formulario
 ├── css/
-│   └── custom.css          → CSS compilado desde Sass 
+│   ├── custom.css          → CSS compilado desde Sass
+│   ├── bootstrap-icons.min.css → Bootstrap Icons local
+│   └── fonts/              → Fuentes de Bootstrap Icons
 ├── scss/
 │   ├── _variables.scss     → Colores, fuentes y bordes del UI Kit
 │   ├── _botones.scss       → Retoques planos de botones y marca
@@ -23,7 +25,7 @@ void/
 │   ├── bootstrap.bundle.min.js
 │   └── script.js           → Validación de formularios + control de Offcanvas + cabecera dinámica
 ├── img/                    → Imágenes locales
-├── LICENSE-LUCIDE.txt      → Licencia de los iconos Lucide
+├── LICENSE-BOOTSTRAP-ICONS.txt → Licencia de Bootstrap Icons
 ├── .gitignore 
 └── .vscode/settings.json   → Configuración de Live Sass Compiler
 ```
@@ -33,5 +35,5 @@ void/
 
 ## Créditos
 
-- Iconos del header: [Lucide](https://lucide.dev) v1.67.0, licencias ISC/MIT.
-  Consulta `LICENSE-LUCIDE.txt` para el texto completo.
+- Iconos: [Bootstrap Icons](https://icons.getbootstrap.com/) v1.13.2, licencia MIT.
+  Consulta `LICENSE-BOOTSTRAP-ICONS.txt` para el texto completo.
